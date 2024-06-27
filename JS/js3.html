@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication and Division Calculator</title>
+  <script>
+    function multiply() {
+
+      let num1 = parseFloat(document.getElementById('num1').value);
+      let num2 = parseFloat(document.getElementById('num2').value);
+
+
+      let multiplication = num1 * num2;
+
+      document.getElementById('result').innerText = + multiplication;
+    }
+
+    function divide() {
+      let num1 = parseFloat(document.getElementById('num1').value);
+      let num2 = parseFloat(document.getElementById('num2').value);
+
+      
+      if (num2 === 0) {
+        document.getElementById('result').innerText = 'Division by zero is not allowed.';
+      } else {
+      
+        let division = num1 / num2;
+
+        document.getElementById('result').innerText = + division;
+      }
+    }
+  </script>
+</head>
+<body>
+<fieldset style="display: inline;">
+  <label for="num1">1st Number:</label>
+  <input type="number" id="num1" name="num1"><br><br>
+  
+  <label for="num2">2nd Number:</label>
+  <input type="number" id="num2" name="num2"><br><br>
+  
+  <button onclick="multiply()">Multiply</button>
+  <button onclick="divide()">Divide</button>
+  
+  <h3>The Result is:</h3>
+  <p id="result"></p>
+</fieldset>
+</body>
+</html>
